@@ -54,6 +54,19 @@ public class FluxManager {
         selectRandomEvent();
     }
 
+    private void scheduleNextRotation() {
+        long duration = (activeEvent != null && "Peace Flux".equals(activeEvent.getName()))
+            ? PEACE_EVENT_DURATION_TICKS
+            : NORMAL_EVENT_DURATION_TICKS;
+
+        new BukkitRunnable() {
+            @Override
+            public void run() {
+                rotateEvent();
+            }
+        }.runTaskLater(plugin, duration);
+    }
+
     private void selectRandomEvent() {
         FluxEvent newEvent = events.get(random.nextInt(events.size()));
         while (newEvent == activeEvent && events.size() > 1) {
