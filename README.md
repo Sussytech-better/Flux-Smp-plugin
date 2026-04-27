@@ -27,7 +27,7 @@ A Minecraft Spigot plugin that implements the **Flux Events System** for SMP ser
 | 💎 **Rich Flux** | Higher ore spawn rates (30% chance for extra drops) |
 | ⛈ **Storm Flux** | Constant thunderstorms + stronger mobs (Strength effect) |
 | 🧭 **Hunt Flux** | Players track nearest player with compass |
-| 🕊 **Peace Flux** | PvP completely disabled (players can't damage each other) |
+| 🕊 **Peace Flux** | PvP completely disabled (players can't damage each other) - lasts 3 days |
 | 🧨 **Destruction Flux** | Explosions and TNT are 2x stronger |
 | 👻 **Shadow Flux** | Reduced visibility (blindness effects every 4 seconds) |
 | ⚔️ **War Flux** | PvP rewards boosted (+50 XP for kills) |

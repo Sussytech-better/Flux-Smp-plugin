@@ -21,8 +21,9 @@ public class FluxManager {
     private double fluxProgress = 0.0;
     private final Random random = new Random();
 
-    // Event rotation every 10 Minecraft days (24000 ticks * 10 = 240000 ticks)
-    private static final long EVENT_DURATION_TICKS = 240000L;
+    // Event rotation durations
+    private static final long NORMAL_EVENT_DURATION_TICKS = 240000L; // 10 Minecraft days
+    private static final long PEACE_EVENT_DURATION_TICKS = 72000L;   // 3 Minecraft days
 
     public FluxManager(FluxSmpPlugin plugin) {
         this.plugin = plugin;
@@ -36,20 +37,7 @@ public class FluxManager {
         // Select initial event
         selectRandomEvent();
 
-        // Schedule event rotation
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                rotateEvent();
-            }
-        }.runTaskTimer(plugin, EVENT_DURATION_TICKS, EVENT_DURATION_TICKS);
-
-        // Schedule flux bar increase
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                increaseFluxProgress(0.001); // Very slow passive increase
-            }
+        scheduleNextRotation();
         }.runTaskTimer(plugin, 1200L, 1200L); // Every minute
     }
 
@@ -76,7 +64,20 @@ public class FluxManager {
 
     private void setActiveEvent(FluxEvent event) {
         this.activeEvent = event;
-        event.enable();
+     
+
+    private void scheduleNextRotation() {
+        long duration = (activeEvent != null && "Peace Flux".equals(activeEvent.getName()))
+            ? PEACE_EVENT_DURATION_TICKS
+            : NORMAL_EVENT_DURATION_TICKS;
+
+        new BukkitRunnable() {
+            @Override
+            public void run() {
+                rotateEvent();
+            }
+        }.runTaskLater(plugin, duration);
+    }   event.enable();
 
         // Broadcast to all players
         String title = "§6⚡ New Flux Event!";
@@ -88,6 +89,9 @@ public class FluxManager {
             player.sendMessage(chatMessage);
         }
 
+
+        // Schedule next rotation with appropriate duration
+        scheduleNextRotation();
         plugin.getLogger().info("Activated Flux Event: " + event.getName());
     }
 
