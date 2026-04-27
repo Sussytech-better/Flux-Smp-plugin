@@ -1,0 +1,18 @@
+name: FluxSmpPlugin
+version: 1.0.0
+main: com.sussytech.fluxsmp.FluxSmpPlugin
+api-version: 1.21
+description: A Minecraft plugin implementing the Flux Events System
+author: Sussytech
+website: https://github.com/Sussytech-better/Flux-Smp-plugin
+
+commands:
+  flux:
+    description: Manage Flux Events
+    usage: /flux <info|reload>
+    permission: flux.admin
+
+permissions:
+  flux.admin:
+    description: Allows use of flux admin commands
+    default: op

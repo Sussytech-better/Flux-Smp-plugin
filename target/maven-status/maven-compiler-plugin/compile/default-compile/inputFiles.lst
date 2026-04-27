@@ -1,0 +1,17 @@
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/ChaosFluxEvent.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/GravityFluxEvent.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/FortuneFluxEvent.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/ShadowFluxEvent.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/RichFluxEvent.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/managers/FluxManager.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/listeners/PlayerListener.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/FluxSmpPlugin.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/StormFluxEvent.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/PeaceFluxEvent.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/FluxEvent.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/commands/FluxCommand.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/BloodFluxEvent.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/HuntFluxEvent.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/FreezeFluxEvent.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/DestructionFluxEvent.java
+/workspaces/Flux-Smp-plugin/src/main/java/com/sussytech/fluxsmp/events/WarFluxEvent.java
